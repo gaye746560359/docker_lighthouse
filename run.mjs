@@ -26,7 +26,7 @@ async function readJSONFile(filePath) {
 }
 
 async function writeMongodb(lhrData) {
-  const url = 'mongodb://admin:admin02023@118.190.144.92:27017/';
+  const url = 'mongodb://*********/';
   const client = new MongoClient(url);
   const dbName = 'webApiLog';
   await client.connect();
@@ -39,8 +39,8 @@ async function writeMongodb(lhrData) {
 
 async function login(page, origin) {
   await page.goto(origin);
-  await page.type('input[name="username"]', '13753214040');
-  await page.type('input[name="password"]', 'yj1234567');
+  await page.type('input[name="username"]', '*******');
+  await page.type('input[name="password"]', '*******');
   await page.click('button.el-button--primary');
   await page.waitForNavigation({ waitUntil: 'load' });
 }
